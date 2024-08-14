@@ -13,7 +13,7 @@ end)
 RegisterNUICallback("washMoney", function()
   ESX.TriggerServerCallback('5e_moneywash:getblackmoney', function(result, blackMoney)
     if result == true then
-      TriggerEvent('esx:showNotification', 'You have washed $'..blackMoney)
+      TriggerEvent('esx:showNotification', 'Ennyi $ mostál'..blackMoney)
       TriggerScreenblurFadeOut(0)
       SendNUIMessage({
         display = false
@@ -34,7 +34,7 @@ function openNUI()
       })
       SetNuiFocus(true, true) 
     else
-      TriggerEvent('esx:showNotification', 'You don\'t have black money!')
+      TriggerEvent('esx:showNotification', 'Nincs piszkos pénzed!')
     end
   end)
 end
